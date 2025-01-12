@@ -45,7 +45,7 @@ func HanlderCreateRecord(db *gorm.DB) func(ctx *gin.Context) {
 			return
 		}
 
-		if err := model.ProxyFilterByTimeRequest(id, newRequest.GroupID.String()); err != nil {
+		if err := biz.ProxyFilterByTimeRequest(id, newRequest.GroupID.String()); err != nil {
 			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error(), "message": "Too many request", "status": false, "data": nil})
 			return
 		}
@@ -95,7 +95,7 @@ func HanlderCreateRecord(db *gorm.DB) func(ctx *gin.Context) {
 			return
 		}
 		log.Printf(`SoulT7 - [%s] - Request call increase app`, id)
-		model.CallAppIncrease(id, newRequest.GroupID.String())
+		biz.CallAppIncrease(id, newRequest.GroupID.String())
 
 		ctx.JSON(http.StatusOK, gin.H{"error": "", "message": "Increase vote success", "status": true, "data": nil})
 		return
