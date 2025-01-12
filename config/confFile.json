@@ -1,0 +1,7 @@
+{
+  "name":"Jira_Hook_Project",
+  "env":{
+      "pgConnRO":"host=127.0.0.1 user=eventRO password=123456 dbname=cohon port=5432 sslmode=disable TimeZone=Asia/Ho_Chi_Minh",
+      "pgConnRW":"host=127.0.0.1 user=eventRW password=123456 dbname=cohon port=5432 sslmode=disable TimeZone=Asia/Ho_Chi_Minh"
+  }
+}

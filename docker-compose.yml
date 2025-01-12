@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: .
+    # dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+#    volumes:
+##      - /d/GoLang/dev/ocr/log:/log
+##      - /d/GoLang/dev/ocr/config:/config
+#      - /home/duy.nguyen17/eventT7/log:/log
+#      - /home/duy.nguyen17/eventT7/config:/config
